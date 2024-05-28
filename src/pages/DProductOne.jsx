@@ -338,11 +338,11 @@ sign: "385"
     const payload = {
       ...productdetail,
       ProductQuantity,
-      TotalPrice: productdetail.sign * ProductQuantity
+      TotalPrice: productdetail?.sign * ProductQuantity
     };
   
     // Check if the product is already in the cart
-    const existingProductIndex = state.cart.findIndex(item => item.title === productdetail.title);
+    const existingProductIndex = state?.cart?.findIndex(item => item?.title === productdetail?.title);
   
     if (existingProductIndex !== -1) {
       // If the product is already in the cart, update its quantity
@@ -366,7 +366,7 @@ sign: "385"
   return (
     <>
 
-<djpg>
+<div>
       {/* left right */}
       <div className='row container py-5' >
 
@@ -415,7 +415,7 @@ sign: "385"
 
         </div>
       </div>
-</djpg>
+</div>
 
     </>
   )
