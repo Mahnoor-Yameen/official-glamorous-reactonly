@@ -373,7 +373,7 @@ sign: "385"
         {/* left */}
         <div className=" col-md-6 col-sm-12">
           {
-            productdetail?.thumbnail && <ImageSection images={productdetail.thumbnail} />
+            productdetail?.thumbnail && <ImageSection images={productdetail?.thumbnail} />
           }
         </div>
 
@@ -383,8 +383,8 @@ sign: "385"
 
           {/* intro */}
           <div className='my-5'>
-            <h1>{productdetail.title}</h1>
-            <p className='' style={{fontSize:"18px"}}>Price:  &#163; {productdetail.sign}</p>
+            <h1>{productdetail?.title}</h1>
+            <p className='' style={{fontSize:"18px"}}>Price:  &#163; {productdetail?.sign}</p>
             <p className='text-center my-5' style={{ fontSize: "18px" }}>Tax included. Shipping calculated at checkout.</p>
           </div>
 
