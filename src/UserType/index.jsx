@@ -1,48 +1,47 @@
 import React from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom'
-import Home from './../pages/Home'
-import Login from './../pages/Login'
-import Signup from './../pages/Signup'
-import Products from './../pages/Products'
-import Page404 from './../pages/Page404'
-import Footer from './../components/Footer'
-import DSpecificCategoryProducts from './../pages/DSpecificCategoryProducts'
-import DProductOne from './../pages/DProductOne'
-import Profile from './../pages/Profile'
-import Payment from './../pages/Payment'
-import HairExtension from './../pages/HairExtension'
-import HairEssential from './../pages/HairEssential'
+import Home from './../default/pages/Home'
+import Login from './../default/pages/Login'
+import Register from './../default/pages/Register'
+import Page404 from './../default/pages/Page404'
+import Footer from './../default/components/Footer'
+// import DSpecificCategoryProducts from './../default/pages/DSpecificCategoryProducts'
+import DProductOne from './../default/pages/DProductOne'
+import Profile from './../default/pages/Profile'
+import Payment from './../default/pages/Payment'
+import HairExtension from './../default/pages/HairExtension'
+import HairEssential from './../default/pages/HairEssential'
 import DorderOne from './../admin/pages/DorderOne'
-import HairUnit from './../pages/HairUnit'
-import Section from './../components/Section'
-import ServicePage from './../pages/ServicePage'
-import Blog from './../pages/Blog'
-import Refund from './../pages/Refund'
-import Privacy from './../pages/Privacy'
-import TermsService from './../pages/TermsService'
-import Shipping from './../pages/Shipping'
-import Contactus from './../pages/Contactus'
-import Checkout from './../pages/Checkout'
-import HairDresser from './../pages/HairDresser'
-import SearchInput from "./../pages/SearchInput"
-import NavUser from './../components/NavUser'
-import MyAllOrders from '../pages/MyAllOrders'
+import HairUnit from './../default/pages/HairUnit'
+import Section from './../default/pages/Section'
+import ServicePage from './../default/pages/ServicePage'
+import Blog from './../default/pages/Blog'
+import Refund from './../default/pages/Refund'
+import Privacy from './../default/pages/Privacy'
+import TermsService from './../default/pages/TermsService'
+import Shipping from './../default/pages/Shipping'
+import Contactus from './../default/pages/Contactus'
+import Checkout from './../default/pages/Checkout'
+import HairDresser from './../default/pages/HairDresser'
+import SearchInput from "./../default/pages/SearchInput"
+import MyAllOrders from '../default/pages/MyAllOrders'
+import LogoLine from '../default/components/LogoLine'
+import NavGuest from '../default/components/NavGuest'
 
-import Test from './../pages/Test'
 
 
 
 export default function User() {
 
   return (
+    
     <>
-<NavUser/>
+    <LogoLine/>
+    <NavGuest/>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/signup" element={<Home />} />
+            <Route path="/register" element={<Home />} />
             <Route path="/login" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/test" element={<Test />} />
             <Route path="/order/:hollowthree" element={<DorderOne />} />
 
             
@@ -50,7 +49,7 @@ export default function User() {
             <Route path="/hairextension" element={<HairExtension />} />
             <Route path="/hairessential" element={<HairEssential />} />
             <Route path="/hairunit" element={<HairUnit />} />
-            <Route path="/products/category/:hollow" element={<DSpecificCategoryProducts />} />
+            {/* <Route path="/products/category/:hollow" element={<DSpecificCategoryProducts />} /> */}
             <Route path="/products/:hollowtwo" element={<DProductOne />} />
             <Route path="/service" element={<ServicePage />} />
             <Route path="/blog" element={<Blog />} />

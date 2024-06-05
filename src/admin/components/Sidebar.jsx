@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { signupcontext } from './../../context/signup/contextsignup';
+import { AccountContextVariable } from '../../context/AccountContext';
 
 export default function Sidebar() {
     const location = useLocation();
-    const { login_dispatch } = useContext(signupcontext);
+    const { account_dispatch } = useContext(AccountContextVariable);
 
     // Navigation items
     const navItems = [

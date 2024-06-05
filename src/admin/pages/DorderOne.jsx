@@ -1,18 +1,18 @@
 import React, { useEffect, useState,useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { collection, doc, getDoc } from 'firebase/firestore';
+import {  doc, getDoc } from 'firebase/firestore';
 import { firestore } from './../../Firebase/firebaseConfig';
-import imgforservice from "./../../IMAGES/ServicesImages/img1.jpg";
+import imgforservice from "../../IMAGES/service.jpg";
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
-import { signupcontext } from '../../context/signup/contextsignup';
+import { AccountContextVariable } from '../../context/AccountContext';
 
 
 export default function DorderOne() {
     const { hollowthree } = useParams();
     const [Order, setOrder] = useState({});
     const [Billingopen, setBillingOpen] = useState(false);
-    const { login_state, login_dispatch } = useContext(signupcontext);
+    const { account_state, account_dispatch } = useContext(AccountContextVariable);
     
     const [ShippingOpen, setShippingOpen] = useState(false);
     const [CardOpen, setCardOpen] = useState(false);

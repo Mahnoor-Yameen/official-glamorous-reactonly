@@ -1,0 +1,18 @@
+.logo-font{
+    font-family:  'Arial Narrow Bold', sans-serif;
+    color: #BB9A2D;
+    
+}
+
+.voucher{
+    color: black;
+}
+.voucher:hover{
+    background-color: #BB9A2D;
+    color: white;
+}
+
+
+.banner-section{
+    font-family:  Geneva, Tahoma, sans-serif;
+}

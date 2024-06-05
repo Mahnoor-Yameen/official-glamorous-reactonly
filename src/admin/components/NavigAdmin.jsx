@@ -2,21 +2,18 @@ import React, { useContext, useEffect } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Cartlogooffcanvas from '../../components/Cartlogooffcanvas';
-import { CartContext } from '../../context/addtocart/context';   //likhna baki
-
+import Cartlogooffcanvas from '../../default/components/Cartlogooffcanvas';
+import { CartContextVariable } from '../../context/CartContext';   //likhna baki
+import { AccountContextVariable } from '../../context/AccountContext';
 import Dropdown from 'react-bootstrap/Dropdown';
-
 import { FaUser } from "react-icons/fa";
-import { signupcontext } from '../../context/signup/contextsignup';
-
 import { Link } from 'react-router-dom';
 
 
 export default function NavigAdmin() {
 
-    const {login_state,login_dispatch}=useContext(signupcontext)
-    const {state,dispatch}=useContext(CartContext)
+    const {account_state,account_dispatch}=useContext(AccountContextVariable)
+    const {cart_state,cart_dispatch}=useContext(CartContextVariable)
 
 
   return (
@@ -99,8 +96,8 @@ export default function NavigAdmin() {
             <FaUser style={{fontSize:"20px"}} className='mx-3'/>
                 </Dropdown.Toggle>
                 <Dropdown.Menu style={{ backgroundColor: "#ffeaa9" }} >
-                  <Dropdown.Item  onClick={()=>{login_dispatch({type:'LOGOUT'})
-                dispatch({type:'CLEAR_CART'})
+                  <Dropdown.Item  onClick={()=>{account_dispatch({type:'LOGOUT'})
+                cart_dispatch({type:'CLEAR_CART'})
                 }}>LogOut</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

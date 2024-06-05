@@ -1,0 +1,21 @@
+.whatsapp-us {
+    position: fixed;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+    background-color: rgb(205, 214, 205); /* Optional: Add background color */
+    color: black; /* Optional: Add text color */
+    padding: 8px 20px; /* Optional: Add padding */
+    margin-right: 20px;
+    font-size: 15px; /* Optional: Add font size */
+    z-index: 1000; /* Ensure it appears above other content */
+    white-space: nowrap; /* Ensure the text doesn't wrap */
+  }
+
+  .whatsapp-us:hover{
+    background-color: #BB9A2D; /* Optional: Add background color */
+    color: white;
+
+  }
+  

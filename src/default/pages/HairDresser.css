@@ -1,0 +1,11 @@
+
+.service-hover{
+    color: #000000;
+    border:1px solid #BB9D4A;
+}
+
+.service-hover:hover{
+    background-color: #e4c264;
+    color: rgb(0, 0, 0);
+    border: 2px solid #a1822c;
+}

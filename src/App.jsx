@@ -1,6 +1,8 @@
 import React from 'react';
-import { signupcontext } from './context/signup/contextsignup';
+import { AccountContextVariable } from './context/AccountContext';
+import './index.css'
 import { useContext } from 'react';
+import './App.css'
 import User from "./UserType";
 import Default from './default';
 import Admin from './admin'
@@ -12,11 +14,11 @@ export default function App() {
     admin:Admin
   };
 
-  const { login_state } = useContext(signupcontext);
+  const { account_state } = useContext(AccountContextVariable);
 
   const AppSelection = (role) => AvailableApps[role] || AvailableApps["default"]; // Yahaan role ke according component select karna hai.
 
-  const CurrentApp = AppSelection(login_state.token);
+  const CurrentApp = AppSelection(account_state.token);
   
   return (
     <>

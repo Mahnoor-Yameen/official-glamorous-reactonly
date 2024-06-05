@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import { collection, getDocs } from "firebase/firestore";
-import { auth, firestore } from "./../../Firebase/firebaseConfig";
-
-import Button from 'react-bootstrap/Button';
+import {  firestore } from "./../../Firebase/firebaseConfig";
 import Card from 'react-bootstrap/Card';
 
 export default function Users() {

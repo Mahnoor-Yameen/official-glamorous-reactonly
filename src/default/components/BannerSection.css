@@ -1,0 +1,16 @@
+.banner-font{
+    font-family:  sans-serif;
+}
+
+.banner-section-hover{
+    color: white;
+    border: 2px solid #BB9A2D;
+
+}
+
+.banner-section-hover:hover{
+    background-color: #BB9A2D;
+    border: 2px solid black;
+
+    color: white;
+}
